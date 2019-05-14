@@ -26,10 +26,20 @@ module: {
     },
     ],
     rules: [
+        {
+            test: /\.css$/i,
+            use: ['style-loader', 'css-loader'],
+        },
+        ],
+    rules: [
     {
-        test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
-    },
-    ],
+        test: /\.(sass|scss)$/i,
+        use: [
+        'style-loader',
+        'css-loader',
+        'sass-loader',
+        ]
+    }
+    ],    
     },
 };
